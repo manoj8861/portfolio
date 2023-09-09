@@ -1,3 +1,3 @@
 ### Portfolio 
 
-My Personal Blog created from Next-js-Tailwind starter blog.
+This portfolio was built on top of [Tailwind Next JS Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) template which comes with built-in blogs functionality.
