@@ -1,0 +1,58 @@
+.fade-in {
+  animation: fade-in ease 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner {
+  min-height: 50vh;
+
+  @screen lg {
+    min-height: 95vh;
+  }
+}
+
+.social-icons:last-child .icon {
+  @apply mr-0;
+}
+
+.content {
+  @apply !pb-0;
+}
+
+.collapse .view .title {
+  @apply dark:text-white;
+}
+
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #10df9a, #10b981);
+  transition: width 0.25s ease;
+  -webkit-transition: width 0.25s ease;
+}
+
+.link-underline:hover:after {
+  width: 98%;
+  left: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right,#10df9a, #10b981);
+}
