@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     'A software Engineer who loves learning and solving complex problems.',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://manojkumargk.com',
   siteRepo: 'https://github.com/manoj8861/portfolio',
   siteLogo: '/static/images/logo.png',
@@ -16,7 +16,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/manojkumargk',
+  linkedin: 'https://www.linkedin.com/in/manojkumargk',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

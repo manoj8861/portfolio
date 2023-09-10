@@ -28,9 +28,9 @@ function Main(props: MainProps): React.ReactElement {
         </p>
         <br></br>
         <p className='font-light lg:text-xl'>
-        I'm a Full Stack Engineer who is passionate about building solution 
+        I'm a Full Stack Engineer who is passionate about automating and building  
         <br></br>
-        for real - world problems through code. 
+        solution for complex problems through code. 
       </p>
 
       

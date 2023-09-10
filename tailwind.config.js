@@ -31,46 +31,14 @@ module.exports = {
       fontFamily: {
         sans: ['Open Sans', defaultTheme.fontFamily?.sans],
       },
-
-      keyframes: {
-        wave: {
-          '0%': { transform: 'rotate(0.0deg)' },
-          '15%': { transform: 'rotate(14.0deg)' },
-          '30%': { transform: 'rotate(-8.0deg)' },
-          '40%': { transform: 'rotate(14.0deg)' },
-          '50%': { transform: 'rotate(-4.0deg)' },
-          '60%': { transform: 'rotate(10.0deg)' },
-          '70%': { transform: 'rotate(0.0deg)' },
-          '100%': { transform: 'rotate(0.0deg)' },
-        },
-      },
-      animation: {
-        wave: 'wave 1.5s infinite',
-      },
         
       colors: {
         
         'primary-color': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#10b981',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
+          500: '#10b981',       
         },
         'primary-color-dark': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
           500: '#10b981',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
         },
         primary: colors.emerald,
         gray: colors.trueGray,
