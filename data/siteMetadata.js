@@ -6,7 +6,7 @@ const siteMetadata = {
     'A software Engineer who loves learning and solving complex problems.',
   language: 'en-us',
   theme: 'dark', // system, dark or light
-  siteUrl: 'https://manojkumargk.com',
+  siteUrl: 'https://manojkumar.vercel.app/',
   siteRepo: 'https://github.com/manoj8861/portfolio',
   siteLogo: '/static/images/logo.png',
   image: '/static/avatar.jpg',
