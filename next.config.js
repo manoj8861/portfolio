@@ -1,7 +1,6 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
-
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
@@ -63,6 +62,9 @@ module.exports = withBundleAnalyzer({
   },
   images: {
     domains: ['firebasestorage.googleapis.com'],
+  },
+  experimental: {
+    nftTracing: true,
   },
   async headers() {
     return [
