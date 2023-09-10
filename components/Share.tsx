@@ -34,10 +34,10 @@ export default function Share(props: ShareProps): React.ReactElement {
           <FacebookIcon size={22} color={Colors.facebook} />
         </FacebookShareButton>
         <LinkedinShareButton title={title} url={url}>
-          <LinkedinIcon size={22} color={Colors.linkedin} />
+          <LinkedinIcon size={22} color={Colors.linkedinShare} />
         </LinkedinShareButton>
         <EmailShareButton title={title} url={url}>
-          <EmailIcon size={22} color={Colors.email} />
+          <EmailIcon size={22} color={Colors.emailShare} />
         </EmailShareButton>
       </div>
     </div>

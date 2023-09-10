@@ -43,11 +43,11 @@ export const Colors = {
   kafka: '#000000',
 
   // Social
-  //linkedin: '#0077B5',
+  linkedinShare: '#0077B5',
   twitter: '#1DA1F2',
   youtube: '#FF0000',
   googlescholar: '#4285F4',
-  //email: '#D44638',
+  emailShare: '#D44638',
   buymeacoffee: '#FFDD00',
   reddit: '#ff4500',
   facebook: '#1877f2',
