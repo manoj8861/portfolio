@@ -1,0 +1,94 @@
+---
+title: 'Store Logs locally using Serilog'
+date: '2023-09-12'
+tags: ['serilog', 'asp.netCore', 'webapi', 'logging', 'c#']
+draft: false
+summary: 'Learn how to write logs in text files using serilog'
+images: []
+authors: ['default']
+---
+
+Serilog is a great Logging library that helps in logging server/system events, messages into web, console, and databases etc., Serilog also supports structured logging which is way more useful than traditional logging that helps developers to debug, throubleshoot much more efficently.
+
+In this blog, we will see how we can write logs into text files in asp.net core web api using Serilog.
+
+First we need some nuget packages to be installed.
+
+```cs
+Serilog
+Serilog.Sinks.File
+Serilog.AspNetCore
+Serilog.Settings.Configuration //required to read serilog config from appsettings
+```
+
+Packages can either be installed directly through nuget package manager or by installing through terminal.
+
+```powershell
+Install-Package <Package Name>
+```
+
+After the installation is done. Add serilog to the host and build the application.
+
+```cs:Program.cs
+using Serilog;
+
+var builder = webApplication.CreateBuilder(args);
+builder.Host.UseSerilog();
+
+...
+
+builder.Configuration
+            .AddJsonFile("appsettings.json")
+            .build()
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
+...
+
+var app = builder.Build()
+```
+
+Since we are trying to write logs only to text file. Below config must be added to appsetting.json before procedding with the logging.
+
+```json
+{
+  "Serilog": {
+    "Using":["Serilog.Sinks.File"]
+    "WriteTo": [
+      {
+        "Name": "File",
+        "Args": { "path": "log.txt", "rollingInterval": "Day" }
+      }
+    ]
+  }
+}
+```
+
+As we dicussed earlier serilog supports structured logging and provides more options to customize the logging options through configuration. To read more on it. Please refer it here [serilog-settings-configuration ](https://github.com/serilog/serilog-settings-configuration)
+
+Now, Setup is complete. You can use start using logging in your application. Here is a sample code example.
+
+```cs
+using Serilog
+
+static void main(){
+
+    try{
+        Log.Information("Application Started!");
+
+        ...
+
+        //code to start application
+
+        ...
+    }
+    catch(Exception ex){
+        Log.Fatal(ex, "An unhandled exception occured during Application startup");
+        return 1;
+    }
+}
+
+
+```
